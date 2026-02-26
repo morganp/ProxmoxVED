@@ -53,7 +53,7 @@ header_info
 whiptail --backtitle "Proxmox VE Helper Scripts" --title "Homebrew (Linuxbrew) Installer" --yesno "This Will Install Homebrew (Linuxbrew) on this LXC Container. Proceed?" 10 58
 
 msg_info "Installing Dependencies"
-apt-get install -y build-essential git curl file procps &>/dev/null
+apt install -y build-essential git curl file procps &>/dev/null
 msg_ok "Installed Dependencies"
 
 msg_info "Detecting Non-Root User"
