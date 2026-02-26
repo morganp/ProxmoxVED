@@ -87,7 +87,7 @@ fi
 EOF
 chmod +x /etc/profile.d/homebrew.sh
 
-BREW_USER_HOME=$(eval echo "~$BREW_USER")
+BREW_USER_HOME=$(getent passwd "$BREW_USER" | cut -d: -f6)
 if ! grep -q 'linuxbrew' "$BREW_USER_HOME/.bashrc" 2>/dev/null; then
   cat >> "$BREW_USER_HOME/.bashrc" << 'EOF'
 
