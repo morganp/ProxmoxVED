@@ -59,7 +59,7 @@ msg_ok "Installed Dependencies"
 msg_info "Detecting Non-Root User"
 BREW_USER=$(awk -F: '$3 >= 1000 && $3 < 65534 { print $1; exit }' /etc/passwd)
 if [ -z "$BREW_USER" ]; then
-  msg_error "No non-root user found (uid >= 1000). Create a user first."
+  msg_error "No non-root user found (uid >= 1000). Homebrew cannot run as root. Create a user first."
   exit 1
 fi
 msg_ok "Detected User: $BREW_USER"
