@@ -79,7 +79,7 @@ su - "$BREW_USER" -c 'NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.gi
 msg_ok "Installed Homebrew"
 
 msg_info "Configuring Shell Integration"
-cat > /etc/profile.d/homebrew.sh << 'EOF'
+cat <<'EOF'> /etc/profile.d/homebrew.sh
 #!/bin/bash
 if [ -d "/home/linuxbrew/.linuxbrew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
