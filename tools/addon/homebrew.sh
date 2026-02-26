@@ -100,7 +100,7 @@ fi
 msg_ok "Configured Shell Integration"
 
 msg_info "Verifying Installation"
-su - "$BREW_USER" -c 'brew --version'
+su - "$BREW_USER" -c 'brew --version' &>/dev/null
 msg_ok "Homebrew Verified"
 
 echo -e "Successfully Installed!! Homebrew is ready for user ${BL}${BREW_USER}${CL}"
