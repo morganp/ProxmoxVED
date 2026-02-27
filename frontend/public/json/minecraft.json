@@ -1,0 +1,42 @@
+{
+  "name": "Minecraft",
+  "slug": "minecraft",
+  "categories": [24],
+  "date_created": "2026-02-27",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": null,
+  "documentation": "https://docs.papermc.io/paper",
+  "website": "https://papermc.io/",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/papermc.webp",
+  "config_path": "/opt/minecraft/server.properties",
+  "description": "Paper is a high-performance Minecraft server fork that significantly improves performance and fixes gameplay inconsistencies. It is fully compatible with Bukkit and Spigot plugins.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/Minecraft.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 4096,
+        "hdd": 8,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "The Minecraft End User License Agreement is automatically accepted during installation. By using this script you agree to the Minecraft EULA: https://aka.ms/MinecraftEULA",
+      "type": "warning"
+    },
+    {
+      "text": "Connect to the server using the Minecraft Java client at <container-ip>:25565. This script installs Paper for the latest stable Minecraft version. Upgrading to a new Minecraft version requires reinstallation.",
+      "type": "info"
+    }
+  ]
+}
