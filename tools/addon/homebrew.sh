@@ -76,8 +76,8 @@ function install() {
   msg_ok "Detected User: $BREW_USER"
 
   msg_info "Installing Dependencies"
-  $STD apt-get update
-  $STD apt-get install -y build-essential git curl file procps
+  $STD apt update
+  $STD apt install -y build-essential git file procps
   msg_ok "Installed Dependencies"
 
   msg_info "Setting Up Homebrew Prefix"
