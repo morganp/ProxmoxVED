@@ -40,5 +40,5 @@ description
 
 msg_ok "Completed Successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
-echo -e "${INFO}${YW} Java is installed and ready at:${CL}"
-echo -e "${TAB}${GATEWAY}${BGN}ssh root@${IP}${CL}"
+echo -e "${INFO}${YW} Connect your Minecraft client to:${CL}"
+echo -e "${TAB}${GATEWAY}${BGN}${IP}:25565${CL}"
