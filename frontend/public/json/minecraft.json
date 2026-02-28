@@ -1,0 +1,33 @@
+{
+  "name": "Minecraft",
+  "slug": "minecraft",
+  "categories": [24],
+  "date_created": "2026-02-28",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": null,
+  "documentation": "https://minecraft.wiki/",
+  "website": "https://www.minecraft.net/",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/minecraft.webp",
+  "config_path": "",
+  "description": "Minecraft Java Edition server container with OpenJDK 21 (Temurin). Provides a ready-to-use Java environment for running Minecraft server software such as Vanilla, Paper, or Fabric.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/minecraft.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 8,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": []
+}
