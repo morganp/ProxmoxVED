@@ -16,7 +16,7 @@ update_os
 msg_info "Installing Dependencies"
 $STD apt install -y \
   jq \
-  openjdk-21-jdk
+  default-jre
 msg_ok "Installed Dependencies"
 
 msg_info "Downloading Paper MC"
