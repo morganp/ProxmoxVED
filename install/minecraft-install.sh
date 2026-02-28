@@ -14,10 +14,15 @@ network_check
 update_os
 
 msg_info "Installing Dependencies"
-$STD apt install -y \
-  jq \
-  default-jre
+$STD apt install -y jq
 msg_ok "Installed Dependencies"
+
+JAVA_VERSION="21" setup_java
+if ! command -v java &>/dev/null; then
+  msg_info "Installing Java (OpenJDK fallback)"
+  $STD apt install -y openjdk-21-jre-headless
+  msg_ok "Installed Java (OpenJDK fallback)"
+fi
 
 msg_info "Downloading Paper MC"
 mkdir -p /opt/minecraft
