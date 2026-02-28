@@ -13,8 +13,8 @@ setting_up_container
 network_check
 update_os
 
+msg_info "Starting Java installation (Temurin 21 via Adoptium)"
 JAVA_VERSION="21" setup_java
-
 msg_info "Verifying Java Installation"
 if JAVA_BIN=$(command -v java 2>/dev/null); then
   JAVA_REAL=$(readlink -f "$JAVA_BIN")
