@@ -47,6 +47,15 @@ motd=A Minecraft Server
 EOF
 msg_ok "Configured Minecraft"
 
+msg_info "Enabling Console Autologin"
+mkdir -p /etc/systemd/system/container-getty@1.service.d
+cat <<'EOF' >/etc/systemd/system/container-getty@1.service.d/autologin.conf
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin root --noclear --keep-baud tty%I 115200,38400,9600 $TERM
+EOF
+msg_ok "Enabled Console Autologin"
+
 msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/minecraft.service
 [Unit]
