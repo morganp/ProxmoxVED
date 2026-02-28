@@ -14,10 +14,10 @@ network_check
 update_os
 
 msg_info "Installing Dependencies"
-$STD apt install -y jq
+$STD apt install -y \
+  jq \
+  openjdk-21-jdk
 msg_ok "Installed Dependencies"
-
-JAVA_VERSION="21" setup_java
 
 msg_info "Downloading Paper MC"
 mkdir -p /opt/minecraft
